@@ -16,17 +16,17 @@ def replace(initial_string, old_letter, new_letter)
 end
 
 def exactly_divide(an_integer, a_divider)
-  # TODO: return divison of an_integer by a_divider (computing the floating division, NOT the euclidean one)
+ return an_integer/a_divider.to_f
   # example: exactly_divide(13, 4) => 3.25
 end
 
 def divisible_by_two?(an_integer)
-  # TODO: return true if an_integer is divisible by 2
+  return an_integer.even?
   # example: divisible_by_two?(6) => true
 end
 
 def random_subset(an_array, sample_size)
-  # TODO: return a random subset of an_array with size sample_size
+  return an_array.sample(sample_size)
   # example: random_subset(('a'..'z').to_a, 4) => ["u", "q", "l", "t"]
 end
 
@@ -43,3 +43,6 @@ end
 puts get_rid_of_surrounding_whitespaces("  hey yo  ")
 puts belongs_to?("hey jude","jude")
 puts replace("casanova","a","o")
+puts exactly_divide(13,4)
+puts divisible_by_two?(6)
+puts random_subset(('a'..'z').to_a, 4)
