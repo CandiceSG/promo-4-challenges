@@ -31,12 +31,12 @@ def random_subset(an_array, sample_size)
 end
 
 def randomize(an_array)
-  # TODO: return a randomized copy of an_array
+  return an_array.shuffle
   # example: randomize([1, 2, 3, 4]) => [2, 1, 4, 3]
 end
 
 def ascending_order(an_array)
-  # TODO: return a copy of an_array with elements in ascending order
+  return an_array.sort
   # example: ascending_order([7, 3, 1, 6, 9]) => [1, 3, 6, 7, 9]
 end
 
@@ -46,3 +46,5 @@ puts replace("casanova","a","o")
 puts exactly_divide(13,4)
 puts divisible_by_two?(6)
 puts random_subset(('a'..'z').to_a, 4)
+puts randomize([1, 2, 3, 4])
+puts ascending_order([7, 3, 1, 6, 9])
