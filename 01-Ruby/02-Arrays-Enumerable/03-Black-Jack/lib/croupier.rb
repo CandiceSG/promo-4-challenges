@@ -4,6 +4,7 @@ def state_of_the_game(player_score, bank_score)
   "The bank score is #{bank_score} and the player score is #{player_score}"
 end
 
+
 def end_game_message(player_score, bank_score)
   if player_score == 21
     "Black Jack! You win"
