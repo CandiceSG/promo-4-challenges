@@ -1,12 +1,35 @@
 def sum_with_while(min, max)
-  # CONSTRAINT: you should use a while..end structure
+
+
+
+  count = min
+  num = max
+  sum = 0
+
+  while count <= num
+  sum += count
+  count += 1
+  end
+  sum
 end
+puts sum_with_while(0,6)
+
+
 
 def sum_with_for(min, max)
-  # CONSTRAINT: you should use a for..end structure
+  num = 0
+
+  for sum in (min..max)
+    num += sum
+  end
+  num
 end
 
+puts sum_with_for(0,15)
+
+
 def sum_recursive(min, max)
-  # CONSTRAINT: you should use a recursive algorithm, i.e. the method should call itself
+
 end
+
 
