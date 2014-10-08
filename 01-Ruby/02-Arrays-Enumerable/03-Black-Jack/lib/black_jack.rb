@@ -10,7 +10,10 @@ def pick_bank_score
 end
 
 def pick_player_card
+<<<<<<< HEAD
  return p_card.sample
+=======
+>>>>>>> 39752bc7a76c02084770ce3747d845192f0ec266
   # TODO: Use Random to get a new random card
 end
 
