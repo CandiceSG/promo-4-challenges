@@ -13,8 +13,6 @@ while answer != ""
     if answer != ""
       student_array << answer
     end
-
-
 end
 
 student_array = wagon_sort(student_array)
