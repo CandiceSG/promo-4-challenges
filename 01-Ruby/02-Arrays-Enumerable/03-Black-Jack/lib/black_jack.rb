@@ -1,19 +1,12 @@
-player_score = 0
-bank_score = [16..21]
-p_card = [1, 11]
-
 
 
 def pick_bank_score
- return bank_score.sample
-  # TODO: Use Random to get a new random score
+  bank_score = [16, 17, 18, 19, 20, 21]
+  bank_score.sample
 end
 
 def pick_player_card
-<<<<<<< HEAD
- return p_card.sample
-=======
->>>>>>> 39752bc7a76c02084770ce3747d845192f0ec266
-  # TODO: Use Random to get a new random card
+  card = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  card.sample
 end
 
