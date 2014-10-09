@@ -1,7 +1,4 @@
 def sum_with_while(min, max)
-
-
-
   count = min
   num = max
   sum = 0
@@ -18,7 +15,6 @@ puts sum_with_while(0,6)
 
 def sum_with_for(min, max)
   num = 0
-
   for sum in (min..max)
     num += sum
   end
