@@ -1,7 +1,7 @@
 require_relative 'black_jack'
 
-def state_of_the_game(player_score, bank_score)
-  "The bank score is #{bank_score} and the player score is #{player_score}"
+def state_of_the_game(score, bank_score)
+  "Your score is #{score} the bank is #{bank_score}"
 end
 
 
@@ -22,7 +22,8 @@ def play_game
   player_score = 0
   while answer == "yes" || answer == "y"
     player_score += pick_player_card
-    puts "Card ? (type 'y' or 'yes' for a new card)"
+    puts state_of_game(player_score, bank_score)
   end
+  puts end_game_message(player_score, bank_score)
 end
 
