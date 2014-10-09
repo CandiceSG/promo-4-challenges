@@ -1,25 +1,25 @@
 ## Guidelines
 
-## Morning lecture
+### Morning lecture
 
-### BUILT-IN OBJECTS
+**Built-in objects**
 
 - Spend some time (but not too much) on the slides.
-- Then switch on IRB to live-code some examples of operations on built-in objects (try to make it interactive and ask questions to the students)
+- Then switch on IRB to live-code some examples of simple statements on built-in objects (try to make it interactive and ask questions to the students)
 
-###HOW TO RUN YOUR CODE?
+**How to run your code?**
 
 - The main message to give is the following: IRB is the playground to make experiments, your ruby file is your source code! So play with IRB and **then** write your solution in your file, not the other way around.
-- Show how to launch IRB (you have just used it before), how to quit it, and explain its outputs.
+- Show how to launch IRB (you've just used it to demo built-in objects), how to quit it, and explain its outputs.
 - Then show how to run a ruby script from the terminal and how to display results with `puts`. Make them understand that a ruby program can run without printing things on a terminal and that `puts` is just a usefull method as the terminal is our only interface at the moment (you can tease them & say that it will be a web page later on!)
 
-### VARIABLES
+**Variables**
 
 - **Spend time on this!**. Start with the slides then go to the white board to make "shoes box" drawings. A variable is like a **named** shoes box containing a value. When we assign it, we put something in the shoes box. When we use it, we use its content. When we re-assign it, we change our shoes, etc..
 
 - Take your time on assignment and re-assignment coding 2 or 3 different examples on a ruby file. Ask them questions to ensure they get it! Hammer on the fact that a **variable is not a string**, it has no `""`!
 
-### METHODS
+**Methods**
 
 - Again **go slowly**, and live-code different examples to ensure they  really understand the difference between defining and calling a method, and the difference between parameters and arguments !
 
@@ -43,7 +43,7 @@ number = double(number - 22)
 ```
 
 
-## Day challenges
+### Day challenges
 - Before starting the challenges, ensure every student has a clean git status, and that he has pulled upstream, in case the challenges have been changed by the teachers. Otherwise students may work on old versions of the challenges :).
 
 ```
@@ -54,9 +54,9 @@ $ git pull --no-edit upstream master
 
 - Make a brief overview of the roadmap of the day with the class, explaining the idea behind each challenge.
 
-## Live-code
+### Live-code
 
-### General guidelines
+#### General guidelines
 - The live-code should be made **from scratch**. No specs, no boilerplate. The student has to `mkdir` a new folder, `touch` its ruby file, and start coding in it. Help him on the setup. Make him code **a solution that works** in one ruby file before refactoring the code (separating the logic from the interface in 2 files, DRYing the repetitive code chunks, etc..)
 
 - Announce, **before the live-code**, which challenges they are going to live-code and who are the coders of the day. It will make them stay tensed and focused! Tell them they have to speak loud and explain their approach while they are live-coding. That's the best exercise to improve their skills!
@@ -64,7 +64,7 @@ $ git pull --no-edit upstream master
 - At the end of the live-code, ensure every `git status` is clean in the class! To make the work of your buddy-teacher easier tomorrow :)
 
 
-### Live-code details
+#### Live-code details
 
 1. `02-Experiment-methods`: just pick up some of the methods to live-code by a students, not all of them!
 1. `03-What-your-name`: Pick another student. Do not make thim read the challenge README, but make him explain in his own words what his program should accomplish and what he is trying to do (no matter if it differs from the original README). If he gets a hard time writing some code, help him write some pseudo code in english in his ruby file. That's of great help with beginners. Spend time on this live-code proposing some refacto and enhancement of the program.
