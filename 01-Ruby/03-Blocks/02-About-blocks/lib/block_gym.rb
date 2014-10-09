@@ -1,3 +1,7 @@
+def tag(tag_name, attr = nil)
+
+end
+
 
 def timer_for
   start_time = Time.now
