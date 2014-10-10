@@ -1,5 +1,5 @@
 def louchebemize_word(word)
-  suffixe = ["em", "é", "ji", "oc", "ic", "uche", "ès"]
+  suffixe = %w(em, é, ji, oc, ic, uche, ès)
   suffixe_choisi = suffixe.sample
   if word.size <= 1
     puts word
@@ -20,5 +20,5 @@ end
 def louchebemize(sentence)
   words = sentence.split(" ")
   words.map! { | word | louchebemize_word(word) }
- return words.join(" ")
+  return words.join(" ")
 end
