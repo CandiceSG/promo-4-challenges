@@ -1,5 +1,5 @@
 def louchebemize_word(word)
-  suffixe = %w(em, é, ji, oc, ic, uche, ès)
+  suffixe = ["em", "é", "ji", "oc", "ic", "uche", "ès"]
   suffixe_choisi = suffixe.sample
   if word.size <= 1
     puts word
