@@ -1,7 +1,6 @@
 def pmu_format!(race_array)
-  # TODO: modify the given array so that it is PMU-consistent. This method should return nil.
+  race_array.reverse!.map! do |horse|
+    (race_array.length - race_array.index(horse)).to_s + "-" + horse + "!"
+  end
+  nil
 end
-
-
-
-
