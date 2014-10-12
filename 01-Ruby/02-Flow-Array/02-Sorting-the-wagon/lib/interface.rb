@@ -8,11 +8,10 @@ answer = gets.chomp
     student_array << answer
 
 while answer != ""
-    puts "Type another student name (or press enter to finish)"
-    answer = gets.chomp
-    if answer != ""
-      student_array << answer
-    end
+  puts "Type another student name (or press enter to finish)"
+  answer = gets.chomp
+     if answer != "" then student_array << answer
+     end
 end
 
 student_array = wagon_sort(student_array)
