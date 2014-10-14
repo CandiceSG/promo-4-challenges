@@ -25,7 +25,7 @@ def most_successfull(number, max_year, file_name)
   return movies_max_year.take(number)
 end
 
-  filepath = "/Users/candicesala/code/CandiceSG/promo-4-challenges/01-Ruby/06-Parsing/01-CSV-Parsing/lib/movies.csv"
+filepath = "/Users/candicesala/code/CandiceSG/promo-4-challenges/01-Ruby/06-Parsing/01-CSV-Parsing/lib/movies.csv"
 
 p most_successfull(8, 1975, filepath)
 
