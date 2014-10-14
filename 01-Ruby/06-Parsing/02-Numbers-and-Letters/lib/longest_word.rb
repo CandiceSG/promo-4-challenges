@@ -2,20 +2,24 @@ require 'open-uri'
 require 'json'
 
 def generate_grid(grid_size)
- array = []
- grid_size.times{ array << [*('A'..'Z')].sample }
+  array = []
+ grid_size.times { array << [*('A'..'Z')].sample }
  return array # TODO: generate random grid of letters
 end
 
 
 def run_game(attempt, grid, start_time, end_time)
+  attemp_array = attempt.upcase.split(//)
+  (attemp_array - array).empty?
+
+
   time_taken = end_time - start_time
 end
 
 
-#l'ordinateur donne un random word_grid de 9 lettres qui peuvent être répétées
+# l'ordinateur donne un random word_grid de 9 lettres qui peuvent être répétées
 # l'internaute entre le mot qu'il pense le plus long en anglais avec uniquement les lettres données
-#l'ordinateur
+# l'ordinateur
 # 1. lui affiche le mot
 # 2. lui donne le temps que ça a pris
 # 3. lui donne un score
