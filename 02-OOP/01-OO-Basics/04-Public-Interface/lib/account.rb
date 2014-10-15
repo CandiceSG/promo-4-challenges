@@ -2,7 +2,12 @@
 class DepositError < StandardError
 end
 
+
+
 class BankAccount
+
+  attr_reader :iban, :transactions, :to_s, :name, :position
+
   # Contract for the BankAccount class
   # - you can access full owner's name and position, but partial IBAN
   # - you cannot access full IBAN
@@ -24,33 +29,48 @@ class BankAccount
   end
 
   def withdraw(amount)
-    # TODO: Call add_transaction with the right argument
-    # TODO: returns a string with a message
+    add_transaction( - amount)
+    puts "You've just withdrawn #{amount} euros"
   end
 
   def deposit(amount)
-    # TODO: Call add_transaction with the right argument
-    # TODO: returns a string with a message
+    add_transaction( + amount)
+# TODO: Call add_transaction with the right argument
+    puts "You've just deposit #{amount} euros"
   end
 
   def transactions_history(args = {})
-    # TODO: Check if there is a password and if so if it is correct
+    if args[:password].nil?
+       "no password given"
+    elsif args[:password] == @password
+      return @transactions.to_s
+    else
+       "wrong password"  # TODO: Check if there is a password and if so if it is correct
     # TODO: return a string displaying the transactions, BUT NOT return the transaction array !
+    end
   end
 
   def iban
-    # TODO: Hide the middle of the IBAN like FR14**************606 and return it
+    "#{@iban[0..3]}**************#{@iban[-3..-1]}"
+   # TODO: Hide the middle of the IBAN like FR14**************606 and return it
   end
 
   def to_s
-    # Method used when printing account object as string (also used for string interpolation)
+     "Owner : #{name} \n IBAN : #{iban} \n Current amount : #{position}"
+   # Method used when printing account object as string (also used for string interpolation)
     # TODO: Displays the account owner, the hidden iban and the position of the account
   end
 
   private
 
   def add_transaction(amount)
-    # TODO: add the amount in the transactions array
-    # TODO: update the current position (which represents the balance of the account)
+   @transactions << amount # TODO: add the amount in the transactions array
+   @position += amount # TODO: update the current position (which represents the balance of the account)
   end
 end
+
+new_client = BankAccount.new("Candice", "FR234234345456", 150, "perdue")
+new_client.iban
+new_client.to_s
+new_client.position
+
