@@ -3,6 +3,11 @@ class Playboy
 
   INITIAL_HAIR_LENGTH = 20  # beautiful long playboy hair
 
+
+  attr_reader :nationality, :conquests
+  attr_accessor :name,  :hair_length
+
+
   def initialize(name, nationality)
     @conquests = []
     @name, @nationality = name, nationality
