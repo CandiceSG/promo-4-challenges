@@ -1,15 +1,16 @@
 module DemoModule
   class DemoClass
     def self.introduce
-      # TODO: choose return between 1, 2, 3
+      return 2 # TODO: choose return between 1, 2, 3
     end
 
     def introduce
-      # TODO: choose return between 1, 2, 3
+      return 3 # TODO: choose return between 1, 2, 3
     end
   end
 
   def self.introduce
+    return 1
     # TODO: choose return between 1, 2, 3
   end
 end
