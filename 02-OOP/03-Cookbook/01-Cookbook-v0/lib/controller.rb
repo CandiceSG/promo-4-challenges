@@ -8,7 +8,7 @@ class Controller
   end
 
   def list
-    list_of_recipes = @cookbook.recipes
+    @cookbook.recipes
   end
 
   def create
