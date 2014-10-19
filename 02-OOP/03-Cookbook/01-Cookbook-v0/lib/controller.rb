@@ -11,13 +11,13 @@ class Controller
 
   def list
     # Aller chercher toutes les recipes
-    # Envoyer toutes les recipes à la vue poru l'affichage
+    # Envoyer toutes les recipes a la vue pour l'affichage
     @display.display_recipe(@cookbook.recipes)
   end
 
   def create
     # Il me faut un nom, une description
-    # Créer la recipe
+    # Creer la recipe
     # Donner la recipe au Cookbook pour la stocker
     name = @display.create_recipe
     description = @display.recipe_description
@@ -26,8 +26,8 @@ class Controller
   end
 
   def destroy
-    # demande l'id de la recette à supprimer
-    # dire au cookbook de supprimer la recette de id récupéré
+    # demande l'id de la recette a supprimer
+    # dire au cookbook de supprimer la recette de id recupere
     index = @display.destroy_recipe
     @cookbook.remove_recipe(index.to_i)
   end
