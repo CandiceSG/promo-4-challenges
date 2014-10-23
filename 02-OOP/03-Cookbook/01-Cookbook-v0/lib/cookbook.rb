@@ -7,7 +7,7 @@ class Cookbook
   def initialize(csv_file)
     @csv_file = csv_file
     @recipes = [] # Array of Recipe. [Recipe, Recipe]
-    CSV.foreach(csv_file) { |row| @recipes << Recipe.new(row[0], row[1]) }
+    CSV.foreach(csv_file) { |row| @recipes << Recipe.new(row[0], row[1], row[2], row[3]) }
     # row is an Array ["gateau", "mon super gateau"]
     # Lire toutes les recettes existantes
   end
@@ -16,14 +16,20 @@ class Cookbook
   #   @recipes
   # end
 
+  def marked_recipes
+    @recipes.select { |recipe| recipe.done }
+  end
+
+  def fetch_recipe(index)
+    @recipes[index]
+  end
+
   def add_recipe(recipe)
     @recipes << recipe
 
     # Mettre a jour le CSV
-    csv_options = { col_sep: ',' }
-
-    CSV.open(@csv_file, 'a', csv_options) do |csv|
-      csv << [recipe.name, recipe.description]
+    CSV.open(@csv_file, 'a') do |csv|
+      csv << [recipe.name, recipe.description, recipe.rating, recipe.done]
     end
   end
 
@@ -32,10 +38,9 @@ class Cookbook
 
     # Mettre a jour le CSV
     CSV.open(@csv_file, 'wb') do |csv|
-      @recipes.each { |recipe| csv << [recipe.name, recipe.description] }
+      @recipes.each { |recipe| csv << [recipe.name, recipe.description, recipe.rating, recipe.done] }
     end
   end
 end
 
 
-"/Users/candicesala/code/CandiceSG/promo-4-challenges/02-OOP/03-Cookbook/01-Cookbook-v0/lib/recipes.csv"
