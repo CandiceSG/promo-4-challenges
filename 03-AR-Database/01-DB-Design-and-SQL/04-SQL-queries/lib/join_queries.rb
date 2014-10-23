@@ -9,10 +9,9 @@ end
 
 def stats_on(db, genre_name)
   hash = {}
-
   # TODO: For the given category of music, return the number of tracks and the average song length (as a stats hash)
 end
 
 def top_five_artists(db, genre_name)
-  # TODO: return list of top 5 rock artists
+ array = [] # TODO: return list of top 5 rock artists
 end
