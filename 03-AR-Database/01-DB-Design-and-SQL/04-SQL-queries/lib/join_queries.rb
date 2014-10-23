@@ -1,7 +1,8 @@
 require 'sqlite3'
 
 def detailed_tracks(db)
-  # TODO: return the list of tracks with their album and artist
+ array = db.execute"SELECT t.name, alb.title, art.name FROM tracks t JOIN albums alb ON alb.id = t.album_id JOIN artists art ON art.id = alb.artist_id"
+  return array
 end
 
 def stats_on(db, genre_name)
