@@ -61,4 +61,34 @@ and run `sqlite3` binary. Create the `cities` tables, insert data but do not
 focus too much on that, explain to the students that will be the topic of the next
 day. Then run some `SELECT` queries.
 
+## Live-Code
+
+Talk about the order of keywords in a query (`SELECT`, `as`, `FROM`, `as`, `JOIN`, `GROUP BY`, `ORDER BY`, `LIMIT`).
+
+Take some examples of queries on a student database you make up:
+
+```sql
+# Sort by age, then by last name if same age
+SELECT first_name, last_name, age, height
+FROM students
+ORDER BY age ASC, last_name ASC;
+
+# Get average age of students
+SELECT AVG(age)
+FROM students;
+
+# Map age with average height: 16yo => 1m60, 17yo => 1m70
+SELECT age, AVG(height) as avg_height
+FROM students
+GROUP BY age
+ORDER BY avg_height DESC;
+
+# Find the tallest student in the class
+SELECT height, first_name, last_name
+FROM students
+ORDER BY height DESC
+LIMIT 1;
+```
+
+
 
