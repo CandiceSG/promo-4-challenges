@@ -90,5 +90,8 @@ ORDER BY height DESC
 LIMIT 1;
 ```
 
+Open [db.lewagon.org](http://db.lewagon.org) and build the schema of AirBnB (or
+some other project you or they want) from scratch with them. They should guess
+tables, guide them and write down what they say.
 
 
