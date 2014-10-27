@@ -8,16 +8,4 @@ class CreatePosts < ActiveRecord::Migration
   end
 end
 
-class AddUrlToCreatePosts < ActiveRecord::Migration
-  def change
-    add_column :posts, :url, :string
-  end
-end
-
-class AddVotesToCreatePosts < ActiveRecord::Migration
-  def change
-    add_column :posts, :votes, :integer
-  end
-end
-
 # TODO: your code here to create the posts table

@@ -1,3 +1,4 @@
+require_relative "../models/post.rb"
 require_relative "../views/post_view.rb"
 
 class PostsController
@@ -6,28 +7,34 @@ class PostsController
   end
 
   def index
-    # DO NOT WRITE SQL QUERIES
-    # TODO: gather all posts from the database
-    # TODO: give them to the view to be printed
+    post = Post.all
+    @view.display_with_index(post)
   end
 
   def create
-    # DO NOT WRITE SQL QUERIES
-    # TODO: create a post
+    attributes = @view.ask_for_name_url_and_votes
+    new_post = Post.new(attributes)
+    new_post.save
   end
 
   def update
-    # DO NOT WRITE SQL QUERIES
-    # TODO: update a post
+    id_post, new_attributes = @view.update_post
+    find_id = Post.find(id_post)
+    find_id.name = new_attributes[:name]
+    find_id.url = new_attributes[:url]
+    find_id.save
   end
 
   def destroy
-    # DO NOT WRITE SQL QUERIES
-    # TODO: destroy a post
+   id_post = @view.destroy_post
+   post_deleted = Post.find(id_post)
+   post_deleted.destroy
   end
 
   def upvote
-    # DO NOT WRITE SQL QUERIES
-    # TODO: increment the `votes` column for a post
+   id_post = @view.upvote_post
+   post = Post.find(id_post)
+   post.votes = 1 || + 1
+   post.save
   end
 end
