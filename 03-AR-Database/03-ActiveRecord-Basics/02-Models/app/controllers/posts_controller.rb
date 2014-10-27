@@ -26,15 +26,15 @@ class PostsController
   end
 
   def destroy
-   id_post = @view.destroy_post
-   post_deleted = Post.find(id_post)
-   post_deleted.destroy
+    id_post = @view.destroy_post
+    post_deleted = Post.find(id_post)
+    post_deleted.destroy
   end
 
   def upvote
-   id_post = @view.upvote_post
-   post = Post.find(id_post)
-   post.votes = 1 || + 1
-   post.save
+    id_post = @view.upvote_post
+    post = Post.find(id_post)
+    post.votes = 1 || + 1
+    post.save
   end
 end

@@ -1,5 +1,4 @@
 class PostView
-
   def display_with_index(posts)
     puts "List all posts"
     posts.each do |post|
@@ -25,11 +24,11 @@ class PostView
     new_attributes = {}
     puts "Enter the post ID you want to edit"
     print "> "
-      begin
-        id_post = gets.chomp.to_i
-      rescue ArgumentError
-        puts "Ce n'est pas un id correct"
-      end
+        begin
+          id_post = gets.chomp.to_i
+        rescue ArgumentError
+          puts "Ce n'est pas un id correct"
+        end
     puts "Edit a new name for your post"
     print "> "
     new_attributes[:name] = gets.chomp
@@ -40,15 +39,15 @@ class PostView
   end
 
   def destroy_post
-  puts "what ID's post do you want to delete ?"
-  print "> "
-  id_post = gets.chomp.to_i
+    puts "what ID's post do you want to delete ?"
+    print "> "
+    id_post = gets.chomp.to_i
   end
 
   def upvote_post
-  puts "For which ID's post do you want to vote ?"
-  print "> "
-  id_post = gets.chomp.to_i
-  return id_post
+    puts "For which ID's post do you want to vote ?"
+    print "> "
+    id_post = gets.chomp.to_i
+    return id_post
   end
 end
