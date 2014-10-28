@@ -1,7 +1,7 @@
 require "faker"
 
 5.times do
-  user = User.create({
+  user = User.create( {
     :username   => Faker::Internet.user_name,
     :email       => Faker::Internet.email
                  })
