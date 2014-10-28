@@ -4,14 +4,11 @@ require_relative "config/application.rb"
 
 set :views, proc { File.join(root, "app/views") }
 
-
-
-
-
 get '/' do
-  # TODO: fetch posts from database.
-  #       to pass them to the view, store them in an instance variable
+  @posts = Post.all
+  erb :posts
+end
 
-
-  erb :posts  # The rendered HTML is in app/views/posts.erb
+post '/new_post' do
+  puts params
 end
