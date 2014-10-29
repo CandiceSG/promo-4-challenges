@@ -3,3 +3,34 @@
   width: 840px;
 	font-family: 'Open Sans', sans-serif;
 }
+
+header {
+  border-bottom: solid black 1px;
+
+}
+
+nav li {
+  list-style-type: none;
+
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav {
+    padding-top: 5px;
+    float: left;
+    width: 10%;
+}
+
+.content {
+  border-left: solid black 1px;
+  width: 80%;
+  float: right;
+  padding-left: 40px;
+}
+
+footer {
+  clear: both;
+}
