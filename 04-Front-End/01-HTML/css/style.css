@@ -1,0 +1,25 @@
+body{
+  background: black;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid grey;
+  background: white;
+  padding: 20px;
+}
+
+#navbar ul li{
+  display: inline;
+}
+
+#navbar{
+  background: grey;
+  padding: 10px 0;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+}
